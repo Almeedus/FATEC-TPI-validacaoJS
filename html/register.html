@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <link rel="stylesheet" href="./../css/register.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+<body>
+    
+    <h1>Registro de Produto</h1>
+
+    <form action="/processar-dados" method="post">
+        <!-- Campo 'name' -->
+        <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            placeholder="Nome" 
+            required
+        >
+        <br>
+
+        <!-- Campo 'stockQuantity' -->
+        <input
+            type="number"
+            id="stockQuantity"
+            name="stockQuantity"
+            placeholder="Quantidade em Estoque"
+            required
+        >
+        <br>
+
+        <!-- Campo 'price' -->
+        <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Preço"
+            required
+        >
+        <br>
+
+        <!-- Botão de envio -->
+        <input type="submit" value="Cadastrar">
+    </form>
+</body>
+</html>
