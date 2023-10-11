@@ -1,10 +1,10 @@
 <!-- database.php -->
 
 <?php
-$servername = "serverprojetotpi";
-$username = "pma";
-$password = "12345678";
+$servername = "localhost";
 $dbname = "projetotpi";
+$username = "root";
+$password = "";
 
 // Cria a conexão
 $conn = new mysqli($servername, $username, $password, $dbname);
