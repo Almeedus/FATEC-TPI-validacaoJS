@@ -1,0 +1,27 @@
+*, 
+*:after,
+*:before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --background-color: #111; /* Dark background color */
+    --container-background: #222; /* Darker background color */
+    --text-color: #fff; /* Light text color */
+    --border-color: #333; /* Darker border color */
+    --input-background: #333; /* Darker background color for input fields */
+    --button-color: #0070cc; /* Blue button color */
+    --button-hover-color: #0051a5; /* Darker blue color on hover */
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}

@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lojinha do seu zé</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <title>Login</title>
 </head>
 <body>
-    <a href="/products/register.html">Registro de Produto</a>
+    <div class="login-container">
+        <form id="login-form" class="login-form">
+            <div class="input-container">
+                <label for="username">Usuário</label>
+                <input type="text" id="username" class="input-field" placeholder="John Doe" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Senha</label>
+                <input type="password" id="password" class="input-field" placeholder="Senha" required>
+            </div>
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
 </body>
 </html>

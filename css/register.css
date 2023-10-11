@@ -1,2 +1,53 @@
-/* Estilos padrão para formulários de registro */
+/* Estilo padrão para formulários de registro */
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
 
+.form-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[required] {
+    position: relative;
+}
+
+.form-container input[required]:before {
+    content: '*';
+    color: red;
+    position: absolute;
+    top: 2px;
+    right: -10px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #0070cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #0051a5;
+}
