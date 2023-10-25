@@ -1,6 +1,5 @@
-
 <?php
-include './../../connect.php';
+include '../connect.php';
 
 // Verifica se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -14,7 +13,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         VALUES ('$name', '$stockQuantity', '$price')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Registro inserido com sucesso!";
+        // Redireciona de volta para a página anterior
+        header("Location: {$_SERVER['HTTP_REFERER']}");
+        exit(); // Encerra o script para garantir que o redirecionamento funcione
     } else {
         echo "Erro ao inserir registro: " . $conn->error;
     }
