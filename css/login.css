@@ -5,6 +5,7 @@
     border-radius: 4px;
     padding: 20px;
     width: 300px;
+    margin-bottom: 20px;
 }
 
 .login-form {
@@ -15,7 +16,7 @@
 }
 
 .input-container {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -46,9 +47,14 @@
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%;
+    width: 70%;
+    margin-top: 20px;
 }
 
 .login-button:hover {
     background-color: var(--button-hover-color);
+}
+
+.register-button {
+    margin-top: 20px;
 }
