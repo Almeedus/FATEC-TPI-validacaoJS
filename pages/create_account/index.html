@@ -15,22 +15,22 @@
             <div class="two-section-form">
                 <div class="form-section">
                     <label for="name">Nome</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
             
                     <label for="address">Endereço</label>
-                    <input type="text" name="address" id="address">
+                    <input type="text" name="address" id="address" required>
             
                     <label for="number">Número</label>
-                    <input type="number" name="number" id="number">
+                    <input type="number" name="number" id="number" required>
             
                     <label for="neighborhood">Bairro</label>
-                    <input type="text" name="neighborhood" id="neighborhood">
+                    <input type="text" name="neighborhood" id="neighborhood" required>
             
                     <label for="city">Cidade</label>
-                    <input type="text" name="city" id="city">
+                    <input type="text" name="city" id="city" required>
             
                     <label for="state">Estado</label>
-                    <select id="state" name="state">
+                    <select id="state" name="state" required>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -64,27 +64,29 @@
             
                 <div class="form-section">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email">
+                    <input type="email" name="email" id="email" required>
             
-                    <label for="cpf_cnpj">CPF/CNPJ</label>
-                    <input type="text" name="cpf_cnpj" id="cpf_cnpj">
+                    <label for="cpf_cnpj">CPF / CNPJ</label>
+                    <input type="text" name="cpf_cnpj" id="cpf_cnpj" onblur="validateCPF(this)" required>
             
                     <label for="rg">RG</label>
-                    <input type="text" name="rg" id="rg">
+                    <input type="text" name="rg" id="rg" required>
             
                     <label for="phonenumber">Telefone</label>
                     <input type="text" name="phonenumber" id="phonenumber">
             
                     <label for="cellphone">Celular</label>
-                    <input type="text" name="cellphone" id="cellphone">
+                    <input type="text" name="cellphone" id="cellphone" required>
 
                     <label for="username">Usuário</label>
-                    <input type="text" name="username" id="username">
+                    <input type="text" name="username" id="username" required>
 
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password">
+                    <input type="password" name="password" id="password" required>
                 </div>
             </div>
+            <button type="submit" class="register-button" value=Cadastrar>Registrar</button>
+            <a href="/index.html" class="register-button">Já tem uma conta? Logue-se</a>
         </form>
     </div>
 </body>

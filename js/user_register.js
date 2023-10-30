@@ -18,7 +18,8 @@ function validateForm(event) {
     let password = document.getElementById("password");
 
     // Crie um array com os campos para facilitar a iteração
-    let fields = [name, address, number, neighborhood, city, state, email, cpf_cnpj, rg, phonenumber, cellphone, username, password];
+    // let fields = [name, address, number, neighborhood, city, state, email, cpf_cnpj, rg, phonenumber, cellphone, username, password];
+    let fields = [name, address, number, neighborhood, city, state, email, cpf_cnpj, rg, cellphone, username, password];
     
     // Verifique cada campo
     let hasError = false;
