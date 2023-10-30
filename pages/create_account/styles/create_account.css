@@ -1,0 +1,35 @@
+.form-client-container form {
+    border-radius: 8px;
+    justify-content: space-evenly;
+    max-width: 500px;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    background-color: var(--container-background);
+}
+
+.two-section-form {
+    display: flex;
+    flex-direction: row;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+    width: auto;
+}
+
+.two-section-form label { 
+    color: var(--text-color);
+}
+
+.form-section {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+}
+
+.form-section label {
+    color: var(--text-color);
+}
+

@@ -4,89 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../css/register.css">
+    <link rel="stylesheet" href="./styles/create_account.css">
     <link rel="stylesheet" href="../../css/create_account.css">
     <title>Criar Conta</title>
 </head>
 <body>
-    <div class="form-container">
-        <form action="../../php/users/register.php" id="user_register" class="two-section-form">
-            <div class="form-section">
-                <label for="name">Nome</label>
-                <input type="text" name="name" id="name">
-        
-                <label for="address">Endereço</label>
-                <input type="text" name="address" id="address">
-        
-                <label for="number">Número</label>
-                <input type="number" name="number" id="number">
-        
-                <label for="neighborhood">Bairro</label>
-                <input type="text" name="neighborhood" id="neighborhood">
-        
-                <label for="city">Cidade</label>
-                <input type="text" name="city" id="city">
-        
-                <label for="state">Estado</label>
-                <select id="state" name="state">
-                    <option value="AC">Acre</option>
-                    <option value="AL">Alagoas</option>
-                    <option value="AP">Amapá</option>
-                    <option value="AM">Amazonas</option>
-                    <option value="BA">Bahia</option>
-                    <option value="CE">Ceará</option>
-                    <option value="DF">Distrito Federal</option>
-                    <option value="ES">Espírito Santo</option>
-                    <option value="GO">Goiás</option>
-                    <option value="MA">Maranhão</option>
-                    <option value="MT">Mato Grosso</option>
-                    <option value="MS">Mato Grosso do Sul</option>
-                    <option value="MG">Minas Gerais</option>
-                    <option value="PA">Pará</option>
-                    <option value="PB">Paraíba</option>
-                    <option value="PR">Paraná</option>
-                    <option value="PE">Pernambuco</option>
-                    <option value="PI">Piauí</option>
-                    <option value="RJ">Rio de Janeiro</option>
-                    <option value="RN">Rio Grande do Norte</option>
-                    <option value="RS">Rio Grande do Sul</option>
-                    <option value="RO">Rondônia</option>
-                    <option value="RR">Roraima</option>
-                    <option value="SC">Santa Catarina</option>
-                    <option value="SP">São Paulo</option>
-                    <option value="SE">Sergipe</option>
-                    <option value="TO">Tocantins</option>
-                    <option value="EX">Estrangeiro</option>
-                </select>
-            </div>
-        
-            <div class="form-section">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" id="email">
-        
-                <label for="cpf_cnpj">CPF/CNPJ</label>
-                <input type="text" name="cpf_cnpj" id="cpf_cnpj">
-        
-                <label for="rg">RG</label>
-                <input type="text" name="rg" id="rg">
-        
-                <label for="phonenumber">Telefone</label>
-                <input type="text" name="phonenumber" id="phonenumber">
-        
-                <label for="cellphone">Celular</label>
-                <input type="text" name="cellphone" id="cellphone">
-            </div>
+    <div class="form-client-container">
+        <form action="../../php/users/register.php" id="user_register">
+            <div class="two-section-form">
+                <div class="form-section">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name">
+            
+                    <label for="address">Endereço</label>
+                    <input type="text" name="address" id="address">
+            
+                    <label for="number">Número</label>
+                    <input type="number" name="number" id="number">
+            
+                    <label for="neighborhood">Bairro</label>
+                    <input type="text" name="neighborhood" id="neighborhood">
+            
+                    <label for="city">Cidade</label>
+                    <input type="text" name="city" id="city">
+            
+                    <label for="state">Estado</label>
+                    <select id="state" name="state">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+            
+                <div class="form-section">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email">
+            
+                    <label for="cpf_cnpj">CPF/CNPJ</label>
+                    <input type="text" name="cpf_cnpj" id="cpf_cnpj">
+            
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" id="rg">
+            
+                    <label for="phonenumber">Telefone</label>
+                    <input type="text" name="phonenumber" id="phonenumber">
+            
+                    <label for="cellphone">Celular</label>
+                    <input type="text" name="cellphone" id="cellphone">
 
-            <div class="form-section">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
-        
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password">
+                    <label for="username">Usuário</label>
+                    <input type="text" name="username" id="username">
 
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="password">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" id="password">
+                </div>
             </div>
         </form>
     </div>
 </body>
+<script src="../../js/user_register.js"></script>
 </html>
