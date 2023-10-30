@@ -1,26 +1,19 @@
 /* Estilo padrão para formulários de registro */
-.form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--container-background);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
 .form-container h1 {
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
 }
 
-.form-container label {
-    color: var(--text-color);
+.form-container {
+    width: 500px;
 }
 
 .form-container form {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 500px;
 }
 
 .form-container input {
@@ -54,4 +47,36 @@
 
 .form-container input[type="submit"]:hover {
     background-color: #0051a5;
+}
+
+.two-section-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--container-background);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--container-background);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+}
+
+.form-section label {
+    color: var(--text-color);
+}
+
+.two-section-form label { 
+    color: var(--text-color);
 }
