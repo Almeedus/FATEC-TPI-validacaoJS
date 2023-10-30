@@ -36,6 +36,7 @@
 .register-button {
     text-align: center;
     color: white;
+    margin-top: 20px;
 }
 
 .login-button {
@@ -46,7 +47,7 @@
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100%;
+    width: 80%;
 }
 
 .login-button:hover {
