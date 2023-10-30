@@ -1,41 +1,34 @@
+
 /* Estilo padrão para formulários de registro */
-.form-container h1 {
+
+.form-container {
+    width: 500px;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: var(--container-background);
+}
+
+h1 {
     text-align: center;
     color: var(--text-color);
     margin-bottom: 20px;
 }
 
-.form-container {
-    width: 500px;
-}
-
-.form-container form {
+form {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    max-width: 500px;
+    flex-direction: column;
 }
 
-.form-container input {
+select,
+input {
     margin-bottom: 10px;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-.form-container input[required] {
-    position: relative;
-}
-
-.form-container input[required]:before {
-    content: '*';
-    color: red;
-    position: absolute;
-    top: 2px;
-    right: -10px;
-}
-
-.form-container input[type="submit"] {
+input[type="submit"] {
     background-color: #0070cc;
     color: #fff;
     border: none;
@@ -45,38 +38,10 @@
     transition: background-color 0.3s;
 }
 
-.form-container input[type="submit"]:hover {
+input[type="submit"]:hover {
     background-color: #0051a5;
 }
 
-.two-section-form {
-    display: flex;
-    justify-content: space-between;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--container-background);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: auto;
-}
 
-.form-section {
-    flex: 1;
-    max-width: 400px;
-    margin-right: 20px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--container-background);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: auto;
-}
 
-.form-section label {
-    color: var(--text-color);
-}
 
-.two-section-form label { 
-    color: var(--text-color);
-}

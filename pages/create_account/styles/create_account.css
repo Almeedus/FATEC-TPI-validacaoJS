@@ -1,3 +1,37 @@
-#user_register {
-    margin: 1rem;
+.form-client-container form {
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+    justify-content: space-evenly;
+    max-width: 500px;
+    background-color: var(--container-background);
 }
+
+.two-section-form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: auto;
+}
+
+.two-section-form label { 
+    color: var(--text-color);
+}
+
+.form-section {
+    flex: 1;
+    max-width: 400px;
+    margin-right: 20px;
+    margin: 0 auto;
+    padding: 20px;
+    width: auto;
+}
+
+.form-section label {
+    color: var(--text-color);
+}
+
