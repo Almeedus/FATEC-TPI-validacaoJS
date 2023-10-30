@@ -1,19 +1,17 @@
 .form-client-container form {
-    display: flex;
-    flex-direction: row;
     border-radius: 8px;
     justify-content: space-evenly;
     max-width: 500px;
+    padding: 1rem;
+    border: 1px solid #ccc;
     background-color: var(--container-background);
 }
 
 .two-section-form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     max-width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     width: auto;
 }

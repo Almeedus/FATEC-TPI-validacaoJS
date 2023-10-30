@@ -9,10 +9,9 @@
     <title>Criar Conta</title>
 </head>
 <body>
-    <div>
-        <h1>Cadastro de Usuário</h1>
-        <div class="form-client-container">
-            <form action="../../php/users/register.php" id="user_register" class="two-section-form">
+    <div class="form-client-container">
+        <form action="../../php/users/register.php" id="user_register">
+            <div class="two-section-form">
                 <div class="form-section">
                     <label for="name">Nome</label>
                     <input type="text" name="name" id="name">
@@ -84,8 +83,10 @@
                     <label for="password">Senha</label>
                     <input type="password" name="password" id="password">
                 </div>
-            </form>
-        </div>
+            </div>
+            <input type="submit" value="Cadastrar">
+        </form>
     </div>
 </body>
+<script src="../../js/user_register.js"></script>
 </html>

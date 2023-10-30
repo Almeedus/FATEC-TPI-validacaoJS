@@ -8,6 +8,10 @@
     background-color: var(--container-background);
 }
 
+.error {
+    border: 2px solid red; /* Pode ajustar o estilo de destaque conforme necessário */
+}
+
 h1 {
     text-align: center;
     color: var(--text-color);
