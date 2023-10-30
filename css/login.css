@@ -5,6 +5,7 @@
     border-radius: 4px;
     padding: 20px;
     width: 300px;
+    font-size: var(--font-size-medium);
 }
 
 .login-form {
@@ -25,6 +26,15 @@
     color: var(--text-color);
 }
 
+.input-container #username {
+    font-size: var(--font-size-min);
+    margin-top: 20px;
+}
+.input-container #password {
+    font-size: var(--font-size-min);
+    margin-top: 20px;
+}
+
 .input-field {
     padding: 10px;
     border: 1px solid var(--border-color);
@@ -37,6 +47,7 @@
     text-align: center;
     color: white;
     margin-top: 20px;
+    font-size: var(--font-size-medium);
 }
 
 .login-button {
@@ -48,6 +59,8 @@
     cursor: pointer;
     transition: background-color 0.3s;
     width: 80%;
+    margin-top: 20px;
+    font-size: var(--font-size-min);
 }
 
 .login-button:hover {
