@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../../css/register.css">
-    <link rel="stylesheet" href="../../css/create_account.css">
+    <link rel="stylesheet" href="./styles/create_account.css">
     <title>Criar Conta</title>
 </head>
 <body>
@@ -14,22 +14,22 @@
             <div class="two-section-form">
                 <div class="form-section">
                     <label for="name">Nome</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name">
             
                     <label for="address">Endereço</label>
-                    <input type="text" name="address" id="address" required>
+                    <input type="text" name="address" id="address">
             
                     <label for="number">Número</label>
-                    <input type="number" name="number" id="number" required>
+                    <input type="number" name="number" id="number">
             
                     <label for="neighborhood">Bairro</label>
-                    <input type="text" name="neighborhood" id="neighborhood" required>
+                    <input type="text" name="neighborhood" id="neighborhood">
             
                     <label for="city">Cidade</label>
-                    <input type="text" name="city" id="city" required>
+                    <input type="text" name="city" id="city">
             
                     <label for="state">Estado</label>
-                    <select id="state" name="state" required>
+                    <select id="state" name="state">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
                         <option value="AP">Amapá</option>
@@ -63,31 +63,31 @@
             
                 <div class="form-section">
                     <label for="email">E-mail</label>
-                    <input type="email" name="email" id="email" required>
+                    <input type="email" name="email" id="email">
             
                     <label for="cpf_cnpj">CPF / CNPJ</label>
-                    <input type="text" name="cpf_cnpj" id="cpf_cnpj" onblur="validateDigits()" required>
+                    <input type="text" name="cpf_cnpj" id="cpf_cnpj">
             
                     <label for="rg">RG</label>
-                    <input type="text" name="rg" id="rg" required>
+                    <input type="text" name="rg" id="rg">
             
                     <label for="phonenumber">Telefone</label>
                     <input type="text" name="phonenumber" id="phonenumber">
             
                     <label for="cellphone">Celular</label>
-                    <input type="text" name="cellphone" id="cellphone" required>
+                    <input type="text" name="cellphone" id="cellphone">
 
                     <label for="username">Usuário</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username">
 
                     <label for="password">Senha</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password">
                 </div>
             </div>
-            <button type="submit" class="register-button" value=Cadastrar>Registrar</button>
-            <a href="/index.html" class="register-button">Já tem uma conta? Logue-se</a>
+            <input type="submit" value="Cadastrar">
+            <a href="../../index.html" class="register_button">Já tem uma conta? Logue-se</a>
         </form>
     </div>
 </body>
-<script src="../../js/main.js"></script>
+<script src="../../js/user_register.js"></script>
 </html>

@@ -1,54 +1,53 @@
-import { validateForm } from 'user_register';
-import { validateCPF, validateCNPJ } from './validation/cpf_cnpj';
-
-//form validation
-function validationForm() {
-    return validateForm();
-};
-
-//CNPJ and CPF validations
+// const validateForm = require('user_register');
+// const { validateCPF, validateCNPJ } = require('./validation/cpf_cnpj');
 
 
-function validationCPF(userInput) {
-    const cpfInput = userInput;
+// //form validation
+// function validationForm() {
+//     return validateForm();
+// };
 
-    const isValid = validateCPF(cpfInput);
+// //CNPJ and CPF validations
+// function validationCPF(userInput) {
+//     const cpfInput = userInput;
 
-    if (!isValid) {
-        alert('CPF inválido!')
-    } else {
-        validateCPF();
-    }
-};
+//     const isValid = validateCPF(cpfInput);
 
-function validationCNPJ(userInput) {
-    const cnpjInput = userInput;
+//     if (!isValid) {
+//         alert('CPF inválido!')
+//     } else {
+//         validateCPF();
+//     }
+// };
 
-    const isValid = validateCPF(cnpjInput);
+// function validationCNPJ(userInput) {
+//     const cnpjInput = userInput;
 
-    if (!isValid) {
-        alert('CNPJ inválido!')
-    } else {
-        validateCNPJ();
-    }
-};
+//     const isValid = validateCPF(cnpjInput);
 
-document.getElementById('user_register').addEventListener('submit', function(event) {
-    event.preventDefault();
+//     if (!isValid) {
+//         alert('CNPJ inválido!')
+//     } else {
+//         validateCNPJ();
+//     }
+// };
 
-    function validateDigits() {
-        const userInput = document.getElementById('cpf_cnpj').value;
+// document.getElementById('user_register').addEventListener('submit', function(event) {
+//     event.preventDefault();
+
+//     function validateDigits() {
+//         const userInput = document.getElementById('cpf_cnpj').value;
     
-        if (userInput != "" || userInput.length == 11) {
-            return validationCPF();
-        }
-        else if (userInput != "" || userInput.length == 14) {
-            return validationCNPJ();
-        }
-        else {
-            return alert('Informe uma quantidade de números válidos.')
-        }
+//         if (userInput != "" || userInput.length == 11) {
+//             return validationCPF();
+//         }
+//         else if (userInput != "" || userInput.length == 14) {
+//             return validationCNPJ();
+//         }
+//         else {
+//             return alert('Informe uma quantidade de números válidos.')
+//         }
     
-    };
-});
+//     };
+// });
 

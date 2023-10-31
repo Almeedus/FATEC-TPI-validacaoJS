@@ -16,9 +16,9 @@
     --button-color: #0070cc; /* Blue button color */
     --button-hover-color: #0051a5; /* Darker blue color on hover */
 
-    --font-size-min: 20px;
-    --font-size-medium: 25px;
-    --font-size-max: 30px;
+    --font-size-min: 1.25rem;
+    --font-size-medium: 1.5625rem;
+    --font-size-max: 1.875rem;
 }
 
 body {

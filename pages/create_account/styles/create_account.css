@@ -33,3 +33,8 @@
     color: var(--text-color);
 }
 
+.register_button {
+    text-decoration: none;
+    margin: auto;
+    color: var(--text-color);    
+}
