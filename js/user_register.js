@@ -1,7 +1,7 @@
 
 const user_register_form = document.getElementById('user_register')
 
-function validateForm(event) {
+export function validateForm(event) {
     // Obtenha todos os campos
     let name = document.getElementById("name");
     let address = document.getElementById("address");
