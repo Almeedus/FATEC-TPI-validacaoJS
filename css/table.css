@@ -1,0 +1,51 @@
+table {
+    max-width: 100%; /* Defina uma largura máxima para evitar que a tabela se torne muito larga */
+    overflow-x: auto; /* Adicione rolagem horizontal à tabela */
+    border-collapse: collapse;
+    background-color: var(--container-background);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+table, th, td {
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 6px;
+    text-align: left;
+    white-space: nowrap;
+    max-width: 200px; /* Defina uma largura máxima para as células */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Adicione reticências (...) para indicar que o texto foi cortado */
+}
+
+th {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--container-background);
+}
+
+a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    color: var(--button-hover-color);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 14px;
+}
