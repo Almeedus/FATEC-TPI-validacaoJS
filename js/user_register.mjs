@@ -1,6 +1,6 @@
 import { validateCNPJ, validateCPF } from '../js/validation/cpf_cnpj.mjs';
 
-const user_register_form = document.getElementById('user_register'); 
+const user_form = document.querySelector('.user_form'); 
 
 //Obtenhas os campos
 const name = document.getElementById("name");
@@ -55,8 +55,6 @@ function validateForm(event) {
     let isCPFValid = validateCPF(cpf_cnpj.value);
     let isCNPJValid = validateCNPJ(cpf_cnpj.value);
 
-    console.log(isCNPJValid, isCPFValid)
-
     if (!isCPFValid && !isCNPJValid) {
         cpf_cnpj.classList.add("error");
         hasError = true;
@@ -71,4 +69,4 @@ function validateForm(event) {
     return !hasError;
 }
 
-user_register_form.addEventListener('submit', validateForm);
+user_form.addEventListener('submit', validateForm);

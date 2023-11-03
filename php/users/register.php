@@ -45,18 +45,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
         // Executa a segunda consulta
         if ($stmt->execute()) {
-            echo "Cadastro realizado com sucesso!";
+            // Redirecione para a página anterior
+            echo '<script>alert("Cadastro realizado com sucesso!"); window.location.href = document.referrer;</script>';
         } else {
-            echo "Erro ao cadastrar o login: " . $stmt->error;
+            echo '<script>alert("Erro ao cadastrar o login: ' . $stmt->error . '"); window.location.href = document.referrer;</script>';
         }
     } else {
-        echo "Erro ao cadastrar o cliente: " . $stmt->error;
+        echo '<script>alert("Erro ao cadastrar o cliente: ' . $stmt->error . '"); window.location.href = document.referrer;</script>';
     }
 
     // Fecha a declaração e a conexão
     $stmt->close();
     $conn->close();
 } else {
-    echo "O formulário não foi submetido.";
+    echo '<script>alert("O formulário não foi submetido."); window.location.href = document.referrer;</script>';
 }
 ?>

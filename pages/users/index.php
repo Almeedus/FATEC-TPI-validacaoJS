@@ -48,8 +48,8 @@
             <td>".$row["telefone"]."</td>
             <td>".$row["celular"]."</td>
             <td>
-                <a href='../../php/users/editar_usuario.php?id=".$row["id"]."'>Editar</a> |
-                <a href='excluir_usuario.php?id=".$row["id"]."'>Excluir</a>
+                <a href='./edit.php?id=".$row["id"]."'>Editar</a> |
+                <a href='../../php/users/delete.php?id=".$row["id"]."'>Excluir</a>
             </td>
             </tr>";
         }
