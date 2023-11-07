@@ -9,16 +9,16 @@
     <title>Registro</title>
 </head>
     <body>
+        <a href="../home/index.html" class="back-button">Voltar</a>
         <div class="form-container">
             <h1>Registro de Produto</h1>
-            <form action="../../php/products/register.php" id="product_register" method="post">
+            <form action="../../php/products/register.php" class="product-form" id="product_register" method="post">
                 <!-- Campo 'name' -->
                 <input 
                     type="text" 
                     id="name" 
                     name="name" 
                     placeholder="Nome" 
-                    required
                 >
                 <!-- Campo 'stockQuantity' -->
                 <input
@@ -26,7 +26,6 @@
                     id="stockQuantity"
                     name="stockQuantity"
                     placeholder="Quantidade em Estoque"
-                    required
                 >
                 <!-- Campo 'price' -->
                 <input
@@ -36,7 +35,6 @@
                     placeholder="Preço"
                     min="0.010"
                     step="0.010"
-                    required
                 >
                 <!-- Botão de envio -->
                 <input type="submit" value="Cadastrar">

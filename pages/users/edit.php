@@ -82,6 +82,7 @@ $conn->close();
     <title>Editar Usuário</title>
 </head>
 <body>
+    <a href="../home/index.html" class="back-button">Voltar</a>
     <div class="form-client-container">
         <form action="../../php/users/update.php" class="user_form" method="POST" id="user_edit">
         <div class="two-section-form">

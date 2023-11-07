@@ -9,14 +9,14 @@
 </head>
 <body>
     <div class="login-container">
-        <form id="login-form" class="login-form">
+        <form id="login-form" action="./php/users/login.php" method="post" class="login-form">
             <div class="input-container">
                 <label for="username">Usuário</label>
-                <input type="text" id="username" class="input-field" placeholder="John Doe" required>
+                <input type="text" name="username" id="username" class="input-field" placeholder="John Doe" required>
             </div>
             <div class="input-container">
                 <label for="password">Senha</label>
-                <input type="password" id="password" class="input-field" placeholder="Senha" required>
+                <input type="password" name="password" id="password" class="input-field" placeholder="Senha" required>
             </div>
             <button type="submit" class="login-button">Login</button>
             <a href="./pages/create_account/index.html" class="register-button">Cadastre-se</a>

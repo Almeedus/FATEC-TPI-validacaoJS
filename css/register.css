@@ -45,3 +45,11 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0051a5;
 }
+
+textarea {
+    resize: none;
+    padding: 10px;
+    width: 100%; /* Defina a largura como 100% do contêiner */
+    height: 100px; /* Defina a altura desejada em pixels */
+    margin-bottom: 10px; /* Espaçamento inferior de 10 pixels */
+}

@@ -8,6 +8,7 @@
     <title>Listagem de usuários</title>
 </head>
 <body>
+    <a href="../home/index.html" class="back-button">Voltar</a>
     <?php
     include '../../php/connect.php';
 

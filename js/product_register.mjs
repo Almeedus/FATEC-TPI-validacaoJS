@@ -1,4 +1,4 @@
-const formElement = document.getElementById('product_register');
+const formElement = document.querySelector('.product-form');
 
 function sucessAlert() {
     alert('Cadastro realizado com sucesso!');
