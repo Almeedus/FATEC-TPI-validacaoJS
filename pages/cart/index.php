@@ -12,7 +12,7 @@
     <a href="../home/index.html" class="back-button">Voltar</a>
     <div class="form-container">
         <h1>Carrinho de Compras</h1>
-        <form id="cart_register" method="post">
+        <form id="cart_register" method="post" action="../../php/cart/register.php">
             <!-- Campo 'date' -->
             <input id="date" name="date" type="date">
 
@@ -54,10 +54,15 @@
                 placeholder="Observação"
             ></textarea>
 
+            
             <!-- Botão "Adicionar ao Carrinho" -->
-            <button id="adicionarCarrinho" type="button">Adicionar ao Carrinho</button>
+            <input type="button" value="Adicionar ao Carrinho" id="addCartButton">
+            
+            <!-- Campos de Produtos e Quantidades -->
+            <div id="carrinho"></div>
+
             <!-- Botão "Finalizar Compra" -->
-            <input id="finalizarCompra" type="submit" value="Finalizar Compra">
+            <input type="button" value="Finalizar Compra" id="finishPurchaseButton" hidden>
         </form>
     </div>
     <script src="../../js/cart_register.mjs"></script>
