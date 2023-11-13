@@ -1,70 +1,100 @@
+<?php
+// Include do arquivo de conexão com o banco de dados
+include '../../php/connect.php';
+
+// Verificar a conexão
+if (!$conn) {
+    die('Erro na conexão com o banco de dados: ' . mysqli_connect_error());
+}
+
+// Consulta para obter pedidos e itens
+$sql = "SELECT pedidos.id, pedidos.data, pedidos.observacao, pedidos.cond_pagto, produto.nome, itens_pedidos.qntd
+        FROM pedidos
+        LEFT JOIN itens_pedidos ON pedidos.id = itens_pedidos.id_pedidos
+        LEFT JOIN produto ON itens_pedidos.id_produto = produto.id
+        ORDER BY pedidos.id, produto.id"; // Adicionado ORDER BY para garantir a ordem correta
+
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <link rel="stylesheet" href="../../styles.css">
-    <link rel="stylesheet" href="../../css/register.css">
-    <link rel="stylesheet" href="./styles/cart.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../css/table.css">
+    <style>
+        .details {
+            display: none;
+        }
+
+        .expand-button {
+            cursor: pointer;
+            text-decoration: underline;
+            color: blue;
+        }
+    </style>
+    <title>Gerenciar Pedidos</title>
 </head>
 <body>
-    <a href="../home/index.html" class="back-button">Voltar</a>
-    <div class="form-container">
-        <h1>Carrinho de Compras</h1>
-        <form id="cart_register" method="post" action="../../php/cart/register.php">
-            <!-- Campo 'date' -->
-            <input id="date" name="date" type="date">
+    <table>
+        <thead>
+            <tr>
+                <th>ID do Pedido</th>
+                <th>Data</th>
+                <th>Observação</th>
+                <th>Condição de Pagamento</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Verifique se há resultados
+            if ($result->num_rows > 0) {
+                // Inicializar variável para controlar IDs de detalhes
+                $detailId = 1;
+                // Inicializar variável para controlar ID do pedido anterior
+                $prevOrderId = null;
 
-            <!-- Campo 'product' -->
-            <select id="product" name="product">
-                <option value="" disabled selected>Selecione um produto</option>
-                <?php
-                include '../../php/connect.php';
-
-                $sql = "SELECT id, nome, qtde_estoque FROM produto";
-                $result = $conn->query($sql);
-
-                while ($row = $result->fetch_assoc()) {
-                    echo '<option value="' . $row['id'] . '" data-qtde-estoque="' . $row['qtde_estoque'] . '">' . $row['nome'] . '</option>';
+            // Loop através dos resultados
+            while ($row = $result->fetch_assoc()) {
+                if ($row['id'] !== $prevOrderId) {
+                    // Se este é um novo pedido, exibir informações de pedido
+                    echo "<tr>";
+                    echo "<td>" . $row['id'] . "</td>";
+                    echo "<td>" . $row['data'] . "</td>";
+                    echo "<td>" . $row['observacao'] . "</td>";
+                    echo "<td>" . $row['cond_pagto'] . "</td>";
+                    echo "<td>";
+                    echo '<a href="../../php/cart/delete.php?id=' . $row['id'] . '">Excluir</a> | ';
+                    echo "<span class='expand-button' onclick='toggleDetails($detailId)'>Expandir</span>";
+                    echo "</td>";
+                    echo "</tr>";
+                    echo "<tr class='details' id='details$detailId'>";
+                    echo "<td colspan='5'>";
+                    echo "<strong>Itens do Pedido:</strong><br>";
                 }
-                ?>
-            </select>
-            <!-- Campo 'quantity' -->
-            <input
-                type="number"
-                id="quantity"
-                min="1"
-                name="quantity"
-                placeholder="Quantidade"
-            >
+                // Exibir informações do item
+                echo "Produto: " . $row['nome'] . " | Quantidade: " . $row['qntd'] . "<br>";
 
-            <!-- Campo 'payment' -->
-            <input
-                type="text"
-                id="payment"
-                name="payment"
-                placeholder="Condição de Pagamento"
-            >
+                // Atualizar ID do pedido anterior
+                $prevOrderId = $row['id'];
+            }
+            echo "</td></tr>"; // Fechar a última linha de detalhes
 
-            <!-- Campo 'observation' -->
-            <textarea
-                id="observation"
-                name="observation"
-                placeholder="Observação"
-            ></textarea>
+            } else {
+                echo "<tr><td colspan='5'>Nenhum pedido encontrado.</td></tr>";
+            }
+            ?>
+        </tbody>
+    </table>
 
-            
-            <!-- Botão "Adicionar ao Carrinho" -->
-            <input type="button" value="Adicionar ao Carrinho" id="addCartButton">
-            
-            <!-- Campos de Produtos e Quantidades -->
-            <div id="carrinho"></div>
-
-            <!-- Botão "Finalizar Compra" -->
-            <input type="button" value="Finalizar Compra" id="finishPurchaseButton" hidden>
-        </form>
-    </div>
-    <script src="../../js/cart_register.mjs"></script>
+    <script>
+        function toggleDetails(detailId) {
+            const detailsElement = document.getElementById('details' + detailId);
+            detailsElement.style.display = detailsElement.style.display === 'none' ? 'table-row' : 'none';
+        }
+    </script>
 </body>
 </html>

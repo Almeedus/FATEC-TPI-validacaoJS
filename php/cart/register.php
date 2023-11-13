@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $conn->commit();
 
             // Redirecione para a página desejada com a mensagem de sucesso como parâmetro
-            header("Location: ../../pages/cart/?success_message=Compra registrada com sucesso");
+            header("Location: ../../pages/cart/register.php?success_message=Compra registrada com sucesso");
             exit(); // Certifique-se de sair do script após o redirecionamento
         } else {
             // Se houver algum erro na inserção do pedido, faça o rollback da transação
             $conn->rollback();
 
             // Redirecione para a página desejada com a mensagem de erro como parâmetro
-            header("Location: ../../pages/cart/?error_message=Erro ao registrar a compra");
+            header("Location: ../../pages/cart/register.php?error_message=Erro ao registrar a compra");
             exit(); // Certifique-se de sair do script após o redirecionamento
         }
 
