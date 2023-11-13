@@ -42,20 +42,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
 
-
             // Finalize a transação e confirme as alterações no banco de dados
             $conn->commit();
 
-            // Responda com uma mensagem de sucesso
-            $response = ['message' => 'Compra registrada com sucesso'];
-            echo json_encode($response);
+            // Redirecione para a página desejada com a mensagem de sucesso como parâmetro
+            header("Location: ../../pages/cart/?success_message=Compra registrada com sucesso");
+            exit(); // Certifique-se de sair do script após o redirecionamento
         } else {
             // Se houver algum erro na inserção do pedido, faça o rollback da transação
             $conn->rollback();
 
-            // Responda com uma mensagem de erro
-            $response = ['error' => 'Erro ao registrar a compra'];
-            echo json_encode($response);
+            // Redirecione para a página desejada com a mensagem de erro como parâmetro
+            header("Location: ../../pages/cart/?error_message=Erro ao registrar a compra");
+            exit(); // Certifique-se de sair do script após o redirecionamento
         }
 
         // Feche a conexão com o banco de dados no final
