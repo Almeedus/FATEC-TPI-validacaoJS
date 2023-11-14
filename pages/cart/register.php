@@ -16,29 +16,6 @@
             <!-- Campo 'date' -->
             <input id="date" name="date" type="date">
 
-            <!-- Campo 'product' -->
-            <select id="product" name="product">
-                <option value="" disabled selected>Selecione um produto</option>
-                <?php
-                include '../../php/connect.php';
-
-                $sql = "SELECT id, nome, qtde_estoque FROM produto";
-                $result = $conn->query($sql);
-
-                while ($row = $result->fetch_assoc()) {
-                    echo '<option value="' . $row['id'] . '" data-qtde-estoque="' . $row['qtde_estoque'] . '">' . $row['nome'] . '</option>';
-                }
-                ?>
-            </select>
-            <!-- Campo 'quantity' -->
-            <input
-                type="number"
-                id="quantity"
-                min="1"
-                name="quantity"
-                placeholder="Quantidade"
-            >
-
             <!-- Campo 'payment' -->
             <input
                 type="text"
@@ -53,6 +30,31 @@
                 name="observation"
                 placeholder="Observação"
             ></textarea>
+
+            <hr class='divider'/>
+
+            <!-- Campo 'product' -->
+            <select id="product" name="product">
+                <option value="" disabled selected>Selecione um produto</option>
+                <?php
+                    include '../../php/connect.php';
+
+                    $sql = "SELECT id, nome, qtde_estoque FROM produto";
+                    $result = $conn->query($sql);
+
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<option value="' . $row['id'] . '" data-qtde-estoque="' . $row['qtde_estoque'] . '">' . $row['nome'] . '</option>';
+                    }
+                ?>
+            </select>
+            <!-- Campo 'quantity' -->
+            <input
+                type="number"
+                id="quantity"
+                min="1"
+                name="quantity"
+                placeholder="Quantidade"
+            >
 
             
             <!-- Botão "Adicionar ao Carrinho" -->

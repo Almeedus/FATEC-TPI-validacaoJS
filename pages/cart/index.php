@@ -24,20 +24,11 @@ $result = $conn->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../../css/table.css">
-    <style>
-        .details {
-            display: none;
-        }
-
-        .expand-button {
-            cursor: pointer;
-            text-decoration: underline;
-            color: blue;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles/cart.css">
     <title>Gerenciar Pedidos</title>
 </head>
 <body>
+    <a href="../home/index.html" class="back-button">Voltar</a>
     <table>
         <thead>
             <tr>
@@ -54,6 +45,7 @@ $result = $conn->query($sql);
             if ($result->num_rows > 0) {
                 // Inicializar variável para controlar IDs de detalhes
                 $detailId = 1;
+
                 // Inicializar variável para controlar ID do pedido anterior
                 $prevOrderId = null;
 
@@ -67,11 +59,11 @@ $result = $conn->query($sql);
                     echo "<td>" . $row['observacao'] . "</td>";
                     echo "<td>" . $row['cond_pagto'] . "</td>";
                     echo "<td>";
-                    echo '<a href="../../php/cart/delete.php?id=' . $row['id'] . '">Excluir</a> | ';
-                    echo "<span class='expand-button' onclick='toggleDetails($detailId)'>Expandir</span>";
+                    echo '<a href="excluir_pedido.php?id=' . $row['id'] . '">Excluir</a> | ';
+                    echo "<span class='expand-button' onclick='toggleDetails(" . $row['id'] . ")'>Expandir</span>";
                     echo "</td>";
                     echo "</tr>";
-                    echo "<tr class='details' id='details$detailId'>";
+                    echo "<tr class='details' id='details" . $row['id'] . "'>";
                     echo "<td colspan='5'>";
                     echo "<strong>Itens do Pedido:</strong><br>";
                 }
@@ -82,19 +74,12 @@ $result = $conn->query($sql);
                 $prevOrderId = $row['id'];
             }
             echo "</td></tr>"; // Fechar a última linha de detalhes
-
             } else {
                 echo "<tr><td colspan='5'>Nenhum pedido encontrado.</td></tr>";
             }
             ?>
         </tbody>
     </table>
-
-    <script>
-        function toggleDetails(detailId) {
-            const detailsElement = document.getElementById('details' + detailId);
-            detailsElement.style.display = detailsElement.style.display === 'none' ? 'table-row' : 'none';
-        }
-    </script>
+    <script src="./script/index.js"></script>
 </body>
 </html>

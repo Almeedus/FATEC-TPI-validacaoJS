@@ -1,0 +1,13 @@
+.details {
+    display: none;
+}
+
+.expand-button {
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+.divider {
+    margin-bottom: 1rem;
+}
