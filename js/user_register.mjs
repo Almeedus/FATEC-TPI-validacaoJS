@@ -166,12 +166,29 @@ function validateForm(event) {
     if (!isCPFValid && !isCNPJValid) {
         cpf_cnpj.classList.add("error");
         hasError = true;
+        alert('CPF/CNPJ inválido.')
     } else {
         cpf_cnpj.classList.remove("error");
     }
 
+    // Valide telefone e celular
+    if (phonenumber.value.trim().length !== 11) {
+        phonenumber.classList.add("error");
+        hasError = true;
+        alert('Número de telefone deve possuir 11 caracteres.')
+    } else {
+        phonenumber.classList.remove("error");
+    }
+
+    if (cellphone.value.trim().length !== 11) {
+        cellphone.classList.add("error");
+        hasError = true;
+        alert('Número de celular deve possuir 11 caracteres.')
+    } else {
+        cellphone.classList.remove("error");
+    }
+
     if (hasError) {
-        alert("Por favor, preencha todos os campos e forneça um CPF ou CNPJ válido.");
         event.preventDefault();
     }
     return !hasError;
