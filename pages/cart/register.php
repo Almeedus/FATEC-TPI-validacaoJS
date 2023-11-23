@@ -67,6 +67,6 @@
             <input type="button" value="Finalizar Compra" id="finishPurchaseButton" hidden>
         </form>
     </div>
-    <script src="../../js/cart_register.mjs"></script>
+    <script src="../../js/cart_register.js"></script>
 </body>
 </html>

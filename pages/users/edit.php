@@ -164,5 +164,5 @@ $conn->close();
         </form>
     </div>
 </body>
-<script src="../../js/user_register.mjs" type="module"></script>
+<script src="../../js/user_register.js"></script>
 </html>
