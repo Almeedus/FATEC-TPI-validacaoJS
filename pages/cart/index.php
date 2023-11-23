@@ -59,7 +59,7 @@ $result = $conn->query($sql);
                     echo "<td>" . $row['observacao'] . "</td>";
                     echo "<td>" . $row['cond_pagto'] . "</td>";
                     echo "<td>";
-                    echo '<a href="excluir_pedido.php?id=' . $row['id'] . '">Excluir</a> | ';
+                    echo '<a href="../../php/cart/delete.php?id=' . $row['id'] . '">Excluir</a> | ';
                     echo "<span class='expand-button' onclick='toggleDetails(" . $row['id'] . ")'>Expandir</span>";
                     echo "</td>";
                     echo "</tr>";
